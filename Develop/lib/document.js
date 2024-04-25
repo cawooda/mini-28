@@ -22,7 +22,8 @@ function createDocument(title, tasks = []) {
 
   // TODO: Add TaskListItems to a new TaskList
   
-  const taskList = new TaskList(taskListItems)
+  const taskList = new TaskList({taskListItems})
+
   console.log("taskListItems", taskListItems);
   console.log("========================");
   console.log("tasklist:", taskList);
@@ -41,7 +42,9 @@ function createDocument(title, tasks = []) {
     <body>
       <div class="card">
         ${header.render()}
-        ${taskList.foreEach((task) => task.render())}
+        
+        ${taskList.map((task)=>)}
+        
       </div>
     </body>
   </html>
